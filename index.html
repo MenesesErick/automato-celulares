@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Autômato Celular</title>
+</head>
+<body>
+    <div id="content">
+        <!-- Coluna Esquerda: Descrição do Autômato e Jogo da Vida -->
+        <div id="leftColumn">
+            <div id="description">
+                <h2 id="titulo_coluna">Autômato Celular</h2>
+                <p id="corpo_texto">Autômato celular (AC) é um modelo discreto de computação estudado na teoria dos autômatos. Eles também são modelos matemáticos compostos por uma grande de células, onde cada célula pode estar em um estado específico (como "ligado" ou "desligado") e evolui ao longo do tempo de acordo com regras simples. Essas regras definem o novo estado de cada célula com base no estado atual e de suas vizinhas. Mesmo com regras simples, autômatos celulares podem gerar comportamentos complexos, sendo usados em áreas como física, biologia e computação.</p>
+                
+                <h2 id="titulo_coluna">Jogo da Vida</h2>
+                <p id="corpo_texto">O jogo da vida, criado pelo matemático britânico John Conway em 1970, é um exemplo clássico de autômato celular. Ele simula a evolução de uma população de células em uma grade bidimensional, onde cada célula pode estar "viva" ou "morta". A evolução do jogo é determinada por quatro regras simples:</p>
+                <ul id="corpo_texto">
+                    <li>Uma célula viva com menos de dois vizinhos vivos morre (por solidão).</li>
+                    <li>Uma célula viva com dois ou três vizinhos vivos continua viva (equilíbrio).</li>
+                    <li>Uma célula viva com mais de três vizinhos vivos morre (por superpopulação).</li>
+                    <li>Uma célula morta com exatamente três vizinhos vivos se torna viva (reprodução).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Coluna Central: Jogo da Vida (Canvas e Botões) -->
+        <div id="automato">
+            <div id="container_titulo">
+                <h1 id="titulo_principal">Jogo da Vida</h1>
+            </div>
+            <canvas id="automatoCanvas" width="500" height="500"></canvas>
+            <div id="controlPanel">
+                <button id="prevGenButton">Voltar Geração</button>
+                <button id="nextGenButton">Avançar Geração</button>
+            </div>
+        </div>
+
+        <!-- Coluna Direita: Características e Regras -->
+        <div id="rightColumn">
+            <div id="gameInfo">
+                <h2 id="titulo_coluna">Características do Jogo da Vida</h2>
+                <ul id="corpo_texto">
+                    <li>Dimensão: 2D</li>
+                    <li>Formato da Célula: Quadrangular</li>
+                    <li>Vizinhança: Moore, Raio 1</li>
+                    <li>Condição de Contorno: Limite de valores fixos</li>
+                    <li>Regra de Evolução: Totalística</li>
+                </ul>
+                <h2 id="titulo_coluna">Regras</h2>
+                <ul id="corpo_texto">
+                    <li>1 vizinho - morre</li>
+                    <li>2 ou 4 vizinhos - vive</li>
+                    <li>Mais de 4 vizinhos - morre</li>
+                    <li>3 vizinhos - nasce</li>
+                </ul>
+
+                <h2 id="titulo_coluna">Integrantes do Grupo</h2>
+                <ul id="corpo_texto">
+                    <li>Gabriel Mussatto</li>
+                    <li>Kethelen Parra</li>
+                    <li>Erick Meneses</li>
+                    <li>Hugo Valuar</li>
+                    <li>Pedro Vieira</li>
+                </ul>
+                <p id="corpo_texto">Trabalho sobre autômato celulares feito para a disciplica de Fundamento de sistemas de Informação, na Universidade Estadual do Tocantins do curso de Sistemas de Informação, com o objetivo de compreender como os autômatos funcionam.</p>
+
+            </div>
+        </div>
+    </div>
+    <script src="automato.js"></script>
+</body>
+</html>

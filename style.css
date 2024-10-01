@@ -1,0 +1,147 @@
+/* Estilização do layout */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ajuste para alinhar os elementos ao topo da página */
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    margin: 0;
+    background-color: #6d79c7;
+    padding: 50px;
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+
+
+#content {
+    display: flex; /* Define o container #content como um container flexível, permitindo organizar seus elementos filhos. */
+    flex-direction: row; /* Os elementos filhos serão organizados em uma linha (horizontalmente). */
+    justify-content: space-between; /* Coloca as colunas nas extremidades opostas do container (esquerda e direita). */
+    gap: 30px; /* Adiciona um espaçamento de 100px entre as colunas do layout. */
+    max-width: 1600px; /* Define a largura máxima do container como 1600px. */
+    width: 100%; /* O container ocupará 100% da largura disponível até atingir a largura máxima. */
+}
+
+#leftColumn, #rightColumn {
+    width: 100%; /* Define a largura das colunas como 600px cada. */
+    background-color: #ddd8d8; /* Define a cor de fundo das colunas como um cinza claro (#ddd8d8). */
+    padding: 30px; /* Adiciona 20px de espaçamento interno (padding) ao conteúdo das colunas. */
+    border-radius: 20px; /* Arredonda os cantos das colunas com um raio de 20px. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve em torno das colunas. */
+    height: auto;
+    margin: 0 auto;
+    min-height: 750px; /* Garante que a altura mínima permita acomodar o conteúdo sem cortes */
+    overflow: visible; /* Garante que o conteúdo que ultrapasse o tamanho da coluna seja visível */
+}
+
+#titulo_coluna{
+    text-align: center;
+}
+
+#corpo_texto {
+    text-align: justify;
+    overflow-wrap: break-word; /* Permite que as palavras quebrem se necessário para evitar cortes */
+}
+
+#description h2, #gameInfo h2 {
+    font-family: Arial, sans-serif; /* Define a fonte usada nos títulos <h2> como Arial ou uma fonte genérica sans-serif. */
+    color: #333; /* Define a cor do texto como cinza escuro (#333). */
+    margin-top: 0; /* Remove qualquer margem superior nos elementos <h2>. */
+    margin-bottom: 10px; /* Adiciona 10px de margem inferior nos títulos <h2>. */
+}
+
+#description p, #description ul, #gameInfo p, #gameInfo ul {
+    font-family: Arial, sans-serif; /* Define a fonte dos parágrafos e listas como Arial ou sans-serif. */
+    color: #555; /* Define a cor do texto como cinza médio (#555). */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas de texto para melhorar a legibilidade. */
+    margin: 10px 0; /* Adiciona 10px de margem acima e abaixo dos parágrafos e listas. */
+    padding: 0; /* Remove qualquer padding (espaçamento interno) padrão dos parágrafos e listas. */
+}
+
+#description ul, #gameInfo ul {
+    padding-left: 20px; /* Adiciona um recuo de 20px no início das listas não ordenadas (<ul>). */
+}
+
+#container_titulo{
+    color: #f4f4f4;
+    background-color:#132078c0;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#titulo_principal{
+    font-size: 35px;
+}
+
+#automato {
+    display: flex; /* Define o container do autômato como flexível. */
+    flex-direction: column; /* Organiza os elementos filhos do container verticalmente (coluna). */
+    align-items: center; /* Centraliza os elementos filhos horizontalmente. */
+    margin-top: 4em; /*Adiciona uma margem acima do jogo da vida*/
+    margin: 10 100px; /* Adiciona 100px de margem à esquerda e à direita do container do autômato. */
+}
+
+#automatoCanvas {
+    border: 1px solid black; /* Define uma borda preta sólida com 1px de espessura em torno do canvas (área onde o jogo do autômato é renderizado). */
+    margin-bottom: 20px; /* Adiciona 20px de margem abaixo do canvas. */
+}
+
+#controlPanel {
+    display: flex; /* Define o painel de controle como um container flexível. */
+    gap: 10px; /* Adiciona um espaçamento de 10px entre os botões dentro do painel de controle. */
+}
+
+/* Estilização dos botões */
+button {
+    background-color: #172898ec; /* Define a cor de fundo dos botões como verde (#4CAF50). */
+    color: white; /* Define a cor do texto dos botões como branca. */
+    border: none; /* Remove qualquer borda padrão dos botões. */
+    padding: 10px 20px; /* Adiciona 10px de espaçamento vertical e 20px de espaçamento horizontal dentro dos botões. */
+    text-align: center; /* Centraliza o texto dentro dos botões. */
+    font-size: 16px; /* Define o tamanho da fonte nos botões como 16px. */
+    cursor: pointer; /* Muda o cursor para uma mão (indicando que o botão é clicável). */
+    border-radius: 5px; /* Arredonda os cantos dos botões com um raio de 5px. */
+    transition: background-color 0.3s; /* Adiciona uma transição suave de 0.3 segundos para mudanças na cor de fundo. */
+}
+
+button:hover {
+    background-color: #030d4ac0; /* Altera a cor de fundo do botão para um verde um pouco mais escuro (#45a049) quando o mouse está sobre ele. */
+}
+
+.prevGenButton {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    transition: 0.15s ease;
+    cursor: pointer;
+  }
+  button:active {
+    translate: 0 0.225em;
+  }
+
+  .nextGenButton {
+    font: inherit;
+    background-color: #f0f0f0;
+    border: 0;
+    color: #242424;
+    border-radius: 0.5em;
+    font-size: 1.35rem;
+    padding: 0.375em 1em;
+    font-weight: 600;
+    text-shadow: 0 0.0625em 0 #fff;
+    transition: 0.15s ease;
+    cursor: pointer;
+  }
+  button:active {
+    translate: 0 0.225em;
+  }
+  
